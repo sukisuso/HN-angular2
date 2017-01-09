@@ -1,0 +1,5 @@
+{
+    "author": "Jesús Juan Aguilar",
+    "database": "mongodb://localhost:27017/housenetic",
+    "port": 3000
+}

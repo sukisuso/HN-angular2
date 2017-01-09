@@ -1,0 +1,43 @@
+<ng-menu></ng-menu>
+
+<div class="container">
+    <h2 class="section-node"> Invertir </h2>
+    <div class="row col-md-12 applicationcontent">
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <h2 class="section-title">Are you looking for something in particular?</h2>
+            </div>
+            <div class="col-md-12">
+                <input type="text" placeholder="pick..." class="input"/>
+            </div>
+        </div>
+
+       <div class="row" style="padding-top:150px;" *ngIf="allAvailableContent.length > 0" >
+           <div class="col-xs-12">
+               <div *ngFor='let document of allAvailableContent'>
+                    <div class="col-md-3 content-search">
+                        <img src="{{document.Poster}}" class="img-responsive image-search" alt="Cinque Terre">
+                        <p>{{ document.Title }}</p>
+                    </div>
+                </div>
+
+           </div>
+       </div>
+
+       <div class="row col-md-12">
+            <div class="row col-md-12" *ngIf="allAvailableContent.length === 0" >
+                <div class="col-md-12">
+                    <p>No results found, please insert the IMDB ID from <a href="http://www.imdb.com/">here</a> and create the new content:</p>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" placeholder="id" class="input"/>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" (click)="createImdbId()" >create</button>
+                </div>
+            </div>
+       </div>
+    </div>
+    <ng-footer></ng-footer>
+</div>
+

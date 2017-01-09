@@ -1,0 +1,14 @@
+<div class="login-page">
+
+    <h2 class="subtitle">HouseNetic</h2>
+  <div class="form">
+    <form class="login-form">
+      <input [(ngModel)]="client.user" type="text" placeholder="nombre" name="textinput"/>
+      <input [(ngModel)]="client.password" type="password" placeholder="contraseña"  name="passinput"/>
+      <p *ngIf="errorLoginIn" style="color:red;">Error intentando entrar en la aplicación</p>
+      <button type="button" (click)="loginAction()" >entrar</button>
+      <p class="message">¿Aún no eres usuario? <a href="#" [routerLink]="['/singup']" > Crear nueva cuenta </a></p>
+    </form>
+  </div>
+</div>
+

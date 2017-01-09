@@ -1,0 +1,328 @@
+<ng-menu></ng-menu>
+
+<div class="container">
+    <h2 class="section-node"> Añadir activos </h2>
+    <div class="row col-md-12 applicationcontent">
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <h2 class="section-title">¿Quieres añadir un nuevo activo? completa los siguientes pasos:</h2>
+            </div>
+            <div id="card1" [hidden]="indexPage!==1">
+                <div class="col-md-12">
+                    <h2 class="section-title title-alta">Localización de la vivienda</h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Tipo de via *</p>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="selectpicker">
+                            <option *ngFor="let item of adressTypes" [ngValue]="item.code">{{item.name}}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Dirección *</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Numero</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Puerta</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Escalera</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Ampliación</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Provincia *</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Población *</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Codigo Postal *</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                </div>
+            </div>
+            <div id="card2" [hidden]="indexPage!==2">
+                <div class="col-md-12">
+                    <h2 class="section-title title-alta">Documentación del vendedor</h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Nombre y apellidos *</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                    <div class="col-md-2">
+                        <p>DNI *</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Telefono *</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="input"/>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Email *</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="email" class="input"/>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <h2 class="section-title title-alta">Datos del inmueble</h2>
+                </div>
+                 <div class="col-md-12">
+                    <div class="col-md-2">
+                            <p>Tipo de inmueble *</p>
+                        </div>
+                    <div class="col-md-4">
+                        <select class="selectpicker">
+                            <option *ngFor="let item2 of propertyTypes" [ngValue]="item2.code">{{item2.name}}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Metros cuadrados *</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="email" class="input"/>
+                    </div>
+                 </div>
+                 <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Numero de habitaciones</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="email" class="input"/>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Numero de baños</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="email" class="input"/>
+                    </div>
+                 </div>
+                 <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Incluye garaje</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option1">
+                    </div>
+                    <div class="col-md-2">
+                        <p>Incluye trastero</p>
+                    </div>
+                    <div class="col-md-4">
+                       <input type="checkbox" id="blankCheckbox" value="option2">
+                    </div>
+                 </div>
+                 <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Tiene ascensor</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option3">
+                    </div>
+                    <div class="col-md-2">
+                        <p>Servicio de porteria</p>
+                    </div>
+                    <div class="col-md-4">
+                       <input type="checkbox" id="blankCheckbox" value="option4">
+                    </div>
+                 </div>
+                 <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Aire acondicionado</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option5">
+                    </div>
+                    <div class="col-md-2">
+                        <p>Totalmente amueblado</p>
+                    </div>
+                    <div class="col-md-4">
+                       <input type="checkbox" id="blankCheckbox" value="option6">
+                    </div>
+                 </div>
+                 <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Vivienda nueva</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option7">
+                    </div>
+                    <div class="col-md-2">
+                        <p>Terraza</p>
+                    </div>
+                    <div class="col-md-4">
+                       <input type="checkbox" id="blankCheckbox" value="option8">
+                    </div>
+                 </div>
+                 <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Balcon</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option9">
+                    </div>
+                    <div class="col-md-2">
+                        <p>Patio</p>
+                    </div>
+                    <div class="col-md-4">
+                       <input type="checkbox" id="blankCheckbox" value="option10">
+                    </div>
+                 </div>
+            </div>
+            <div id="card3" [hidden]="indexPage!==3" >
+                <div class="col-md-12">
+                    <h2 class="section-title title-alta">Datos económicos</h2>
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                            <p>Precio *</p>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="input"/>
+                        </div>
+                        <div class="col-md-2">
+                            <p>Precio negociable</p>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="checkbox" id="blankCheckbox" value="option11">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="card3" [hidden]="indexPage!==4" >
+                <div class="col-md-12">
+                    <h2 class="section-title title-alta">Test de conocimiento</h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Distancia al centro menor de un kilometros</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option12">
+                    </div>
+                    <div class="col-md-2">
+                        <p>Distancia al centro menor de cinco kilometros</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option13">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Transporte publico a menos de 300 metros</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option14">
+                    </div>
+                    <div class="col-md-2">
+                        <p>Centro comercial accesible</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option15">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Vivienda situada en capital de provincia</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option16">
+                    </div>
+                    <div class="col-md-2">
+                        <p>Vias de acceso a la vivienda adecuados</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option17">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <p>Zonas verdes proximas</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option18">
+                    </div>
+                    <div class="col-md-2">
+                        <p>Ambulatorio/Hospital proximo</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="blankCheckbox" value="option19">
+                    </div>
+                </div>
+            </div>
+            <!--<div id="card4" [hidden]="indexPage!==5" >
+                <div class="col-md-12">
+                    <h2 class="section-title title-alta">Geolocalización</h2>
+                </div>
+            </div>-->
+            <div id="card5" [hidden]="indexPage!==5" >
+                <div class="col-md-12">
+                    <h2 class="section-title title-alta">Fotos de la casa</h2>
+                </div>
+                <div class="col-md-3">
+                     <input type="file"  />
+                </div>
+
+                 <img class="image" />
+            </div> 
+
+
+            <div class="col-md-12 col-md-offset-4" style="margin-top:40px;">
+                <div class="col-md-1">
+                    <a href="#" *ngIf="indexPage!==1" (click)="showPrev()" class="btn btn-info" role="button" style="width:150px;"> Atras </a>
+                </div>
+                <div class="col-md-1 col-md-offset-1">
+                    <a href="#" *ngIf="indexPage!==5" (click)="showNext()" class="btn btn-info" role="button"  style="width:150px;"> Siguiente </a>
+                </div>
+            </div> 
+        </div>
+
+       
+    </div>
+    <ng-footer></ng-footer>
+</div>
+
